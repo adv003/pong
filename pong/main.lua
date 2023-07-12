@@ -39,6 +39,9 @@ require 'Paddle'
 -- but which will mechanically function very differently
 require 'Ball'
 
+-- requiring AI class.
+local AI = require "AI"
+
 -- size of our actual window
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
@@ -60,6 +63,10 @@ function love.load()
     -- important for a nice crisp, 2D look
     love.graphics.setDefaultFilter('nearest', 'nearest')
 
+    -- Create AI player
+    aiPlayer = AI
+    aiPlayer:init()
+    
     -- set the title of our application window
     love.window.setTitle('Pong')
 
@@ -256,7 +263,8 @@ function love.update(dt)
         ball:update(dt)
     end
 
-    player1:update(dt)
+    -- Call AI player update function
+    aiPlayer:update(dt)
     player2:update(dt)
 end
 
