@@ -256,7 +256,7 @@ function love.update(dt)
 
     -- Call AI player update function
     aiPlayer:update(dt)
-    player2:update(dt)
+    player1:update(dt)
 end
 
 --[[
