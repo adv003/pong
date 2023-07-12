@@ -11,7 +11,7 @@ function AI:update(dt)
     self:movePaddle()
 end
 
-function AI:movePaddle()
+function AI:movePaddle(dt)
     -- Move the AI paddle based on the ball's position and the AI's strategy
     
     -- Get the current Y position of the AI paddle
