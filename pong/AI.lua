@@ -8,7 +8,7 @@ end
 
 function AI:update(dt)
     -- Update AI logic here
-    self:movePaddle()
+    self:movePaddle(dt)
 end
 
 function AI:movePaddle(dt)
